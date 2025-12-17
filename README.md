@@ -54,14 +54,13 @@ O projeto segue uma estrutura de diretórios simples e organizada:
     └── script.js  (Lógica do tema e outras funcionalidades)
 ```
 
-## 🛠️ Como Utilizar
+## 🛠️ Como Utilizar Planilhas
 
-1.  **Download:** Baixe o arquivo ZIP do projeto.
-2.  **Descompactar:** Extraia o conteúdo para uma pasta de sua preferência.
-3.  **Visualizar:** Abra o arquivo `index.html` em qualquer navegador web moderno.
+1.  **Download:** Baixe o arquivo do projeto.
+2.  **Descompactar:** Extraia se necessário o conteúdo para uma pasta de sua preferência.
+3.  **Visualizar:** Abra o arquivo em qualquer seu arquivo ou instale o programa, alguns programas paralelos podem ser necessário, para que tudo funcione normalmente.
 
-O projeto está pronto para ser hospedado em qualquer servidor estático (GitHub Pages, Netlify, Vercel, etc.).
 
 ---
 
-**Desenvolvido por [Flávio de Paulo Baptista]**
+**Desenvolvido por [Flávio P. Baptista]**
