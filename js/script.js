@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Verifica o tema salvo no localStorage ou usa 'dark' como padrão
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
     applyTheme(savedTheme);
 
     // Adiciona o listener de clique no botão de toggle
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             const currentTheme = body.getAttribute('data-bs-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             applyTheme(newTheme);
         });
     }
