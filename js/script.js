@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             const currentTheme = body.getAttribute('data-bs-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             applyTheme(newTheme);
         });
     }
