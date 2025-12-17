@@ -1,0 +1,340 @@
+/* Estilos CSS personalizados */
+
+/* Variáveis de cores baseadas nas cores predominantes solicitadas */
+:root {
+    --color-primary: #8A2BE2;
+    /* Lilás/Roxo */
+    --color-menu: #ce9aff;
+    /* Lilás/Roxo */
+    --color-secondary: #FF1493;
+    /* Rosa Choque */
+    --color-accent: #7FFFD4;
+    /* Verde Água */
+    --color-red-tone: #FF4500;
+    /* Tom de Vermelho para o Rosa Choque */
+
+    /* Cores do tema claro */
+    --light-bg: #ffffff;
+    --light-text: #212529;
+    --light-card-bg: #f8f9fa;
+    --light-border: #dee2e6;
+
+    /* Cores do tema escuro */
+    --dark-bg: #121212;
+    --dark-text: #f8f9fa;
+    --dark-card-bg: #1e1e1e;
+    --dark-border: #343a40;
+}
+
+/* Aplicação das variáveis de cor no tema claro (padrão) */
+body[data-bs-theme="light"] {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+/* Aplicação das variáveis de cor no tema escuro */
+body[data-bs-theme="dark"] {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Estilos para logo */
+
+.logo-menu{
+    width: 250px;
+    height: auto;
+}
+.logo-footer{
+    width: 250px;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+/* Estilos para o Navbar */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para o tema escuro */
+body[data-bs-theme="dark"] .navbar {
+    background-color: var(--dark-card-bg) !important;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+/* Estilos para o tema claro */
+body[data-bs-theme="light"] .navbar {
+    background-color: var(--light-card-bg) !important;
+    border-bottom: 1px solid var(--light-border);
+}
+
+/* Estilo para os links do Navbar */
+.navbar-nav .nav-link {
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-secondary);
+}
+
+.active {
+    color: var(--color-secondary) !important;
+}
+
+
+body[data-bs-theme="dark"] .navbar-nav .nav-link {
+    color: var(--color-menu);
+}
+
+body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+    color: var(--color-secondary);
+}
+
+body[data-bs-theme="dark"] .active {
+    color: var(--color-secondary) !important;
+}
+
+/* Estilo para o Offcanvas */
+.offcanvas {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
+body[data-bs-theme="light"] .offcanvas {
+    background-color: var(--light-card-bg);
+    color: var(--light-text);
+}
+
+/* Estilos para botões e elementos de destaque */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+/* Estilos para o corpo principal e seções */
+.card-main{
+    width: 17rem;
+}
+@media only screen and (max-width: 768px) {
+    .card-main{
+        width: 100%;
+    }
+    
+}
+
+/* Estilos para o Footer */
+footer {
+    background-color: var(--light-card-bg);
+    color: var(--light-text);
+}
+
+body[data-bs-theme="dark"] footer {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
+footer .text-muted {
+    color: var(--light-text) !important;
+}
+
+body[data-bs-theme="dark"] footer .text-muted {
+    color: var(--dark-text) !important;
+}
+
+footer .border-top {
+    border-color: var(--light-border) !important;
+}
+
+body[data-bs-theme="dark"] footer .border-top {
+    border-color: var(--dark-border) !important;
+}
+
+/* Estilos para o Offcanvas */
+.offcanvas {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para o Offcanvas-start (Menu Mobile) */
+.offcanvas.offcanvas-start {
+    left: 0;
+    right: auto;
+    transform: translateX(-100%);
+}
+
+.offcanvas.offcanvas-start.show {
+    transform: translateX(0);
+}
+
+/* Estilos para o Offcanvas no tema claro */
+body[data-bs-theme="light"] .offcanvas {
+    background-color: var(--light-card-bg);
+    color: var(--light-text);
+}
+
+/* Estilos para o Offcanvas no tema escuro */
+body[data-bs-theme="dark"] .offcanvas {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
+/* Estilos para o ícone de tema */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--color-secondary);
+}
+
+body[data-bs-theme="dark"] .theme-toggle {
+    color: var(--color-red-tone);
+}
+body[data-bs-theme="dark"] .theme-toggle:hover {
+    color: rgb(255, 223, 80);
+}
+
+/* Estilos para o dropdown */
+.dropdown-menu {
+    border: 1px solid var(--light-border);
+}
+
+body[data-bs-theme="dark"] .dropdown-menu {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+}
+
+body[data-bs-theme="light"] .dropdown-menu {
+    background-color: var(--light-card-bg);
+    border-color: var(--light-border);
+}
+
+.dropdown-item {
+    color: var(--light-text);
+}
+
+body[data-bs-theme="dark"] .dropdown-item {
+    color: var(--dark-text);
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Estilos para cards */
+.card {
+    border: 1px solid var(--light-border);
+    transition: all 0.3s ease;
+}
+
+body[data-bs-theme="dark"] .card {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+}
+
+body[data-bs-theme="light"] .card {
+    background-color: var(--light-card-bg);
+    border-color: var(--light-border);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o footer */
+footer {
+    padding: 20px 0;
+    border-top: 1px solid var(--light-border);
+}
+
+footer a:hover {
+    color: var(--color-secondary) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body[data-bs-theme="dark"] footer {
+    border-top: 1px solid var(--dark-border);
+}
+
+/* Estilo para o ícone de tema */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--color-secondary);
+}
+
+/* Estilos para o dropdown */
+.dropdown-menu {
+    border: 1px solid var(--light-border);
+}
+
+body[data-bs-theme="dark"] .dropdown-menu {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+}
+
+body[data-bs-theme="light"] .dropdown-menu {
+    background-color: var(--light-card-bg);
+    border-color: var(--light-border);
+}
+
+.dropdown-item {
+    color: var(--light-text);
+}
+
+body[data-bs-theme="dark"] .dropdown-item {
+    color: var(--dark-text);
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Estilos para iamagem Pagina parceiros*/
+
+.img-parceiros {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+    border: solid 2px var(--color-primary);
+    border-radius: 100px;
+    padding: 5px;
+    background-color: var(--color-accent);
+}
+
+/* Estilos para botoes */
+.btn-outline-primary {
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+body[data-bs-theme="dark"] .btn-outline-primary {
+    color: var(--color-menu) !important;
+    border-color: var(--color-menu) !important;
+}
+
+.btn-outline-primary:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    background-color: var(--color-secondary);
+    color: white !important;
+}
